@@ -1,0 +1,72 @@
+//----------------------------------------------------//
+// Inputs & Form & Controls				       		  //
+//----------------------------------------------------//
+fieldset {
+  display: block;
+  text-align: center;
+}
+
+label {
+  display: block;
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+// Inputs
+//----------------------------------------------------//
+input[type="text"],
+input[type="password"],
+input[type="email"],
+input[type="tel"],
+input[type="search"],
+textarea,
+select,
+.input {
+  background-color: transparent;
+  border: 1px solid #6e7279;
+  color: $default;
+  font-size: 14px;
+  line-height: 28px;
+  padding: 4px 10px 5px;
+  width: 100%;
+  display: block;
+  transition: all .3s ease-in-out;
+  -webkit-appearance: none;
+  border-radius: 0;
+  @include placeholderColor(#6e7279);
+  &:focus {
+    border-color: $default;
+  }
+  &.error {
+  }
+  &.disabled,
+  &[disabled="disabled"],
+  &[disabled] {
+    background-color: #f3f3f3;
+  }
+}
+input[type="submit"]{
+  background-color: #b5a263;
+  border: none;
+  color: $fixColor;
+  font-size: 14px;
+  line-height:28px;
+  padding: 5px 10px 4px;
+  width: 100%;
+  display: block;
+  transition: all .3s ease-in-out;
+  -webkit-appearance: none;
+  border-radius: 0;
+  &:hover{
+    background-color: #ccad45;
+  }
+  &:focus {
+    background-color: #bd9b2b;
+  }
+}
+#email-error{
+  font-size: 14px;
+  line-height:28px;
+  color: $default;
+}
